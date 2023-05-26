@@ -3,6 +3,7 @@
 
 #include "modules/CriteriaChecker.h"
 #include "modules/NumberArray.h"
+#include "modules/SequenceChecker.h"
 
 int main(){
     int program;
@@ -32,6 +33,20 @@ int main(){
         }
         printf("\b\b]\n");
 
+    } else if (program == 3){
+        char s[100];
+        printf("Enter a string: ");
+        scanf("%s", s);
+
+        char subs[100];
+        printf("Enter a substring: ");
+        scanf("%s", subs);
+        
+        if (SequenceCheck(s, subs)) {
+            printf("'%s' is a correct substring of '%s'.\n", subs, s);
+        } else {
+            printf("'%s' is not correct substring of '%s'.\n", subs, s);
+        }
     }
 
     
