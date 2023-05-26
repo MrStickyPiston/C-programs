@@ -2,7 +2,7 @@
 
 int main(){
     char* name[20];
-    gets(name);
-
-    printf("Hello world,%s", name);
+    printf("Enter your name: ");
+    scanf("%[^\n]s", name);
+    printf("Hello world, %s\n", name);
 }
