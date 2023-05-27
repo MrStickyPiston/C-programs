@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#include "modules/CriteriaChecker.h"
-#include "modules/NumberArray.h"
-#include "modules/SequenceChecker.h"
+#include "modules/CriteriaChecker.c"
+#include "modules/NumberArray.c"
+#include "modules/SequenceChecker.c"
 
 int main(){
     int program;
