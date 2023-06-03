@@ -6,6 +6,7 @@
 #include "modules/SequenceChecker.c"
 #include "modules/SameDistanceChecker.c"
 #include "modules/BracketsCloser.c"
+#include "modules/StartsWith.c"
 
 int main(){
     int program;
@@ -78,6 +79,29 @@ int main(){
         for (i = 0; i<newSize; i++){
             printf("%c", s[i]);
         }
+
+    } else if (program == 6){
+        char a[20][10] = {"kat", "auto", "kalf", "midden", "kaviaar"};
+        char o[20][10];
+
+        char p[5] = "ka";
+
+        int i, j, oSize;
+
+        printf("Using a hardcoded array...\n");
+
+
+        oSize = StartsWithArray(p, a, 3, o);
+
+        printf("The resulting array is: ['");
+        for (i=0; i<oSize; i++){
+            for (j = 0; j<strlen(o[i]); j++){
+                printf("%c", o[i][j]);
+            }
+            printf("','");
+        }   
+        printf("\b\b]");
+        printf(" \n");
     }
     return 0;
 }
