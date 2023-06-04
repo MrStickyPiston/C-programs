@@ -93,15 +93,11 @@ int main(){
 
         oSize = StartsWithArray(p, a, 3, o);
 
-        printf("The resulting array is: ['");
+        printf("The resulting array is: [");
         for (i=0; i<oSize; i++){
-            for (j = 0; j<strlen(o[i]); j++){
-                printf("%c", o[i][j]);
-            }
-            printf("','");
+            printf("'%s', ", o[i]);
         }   
-        printf("\b\b]");
-        printf(" \n");
+        printf("\b\b]\n");
     }
     return 0;
 }
