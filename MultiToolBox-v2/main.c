@@ -110,7 +110,7 @@ int main(){
         printf("Enter the string: ");
         scanf("%[^\n]s", s);
 
-        printf("The longest words are: ");
+        printf("The longest word(s) are: ");
 
         indexc = GetLongestWords(s, o);
 

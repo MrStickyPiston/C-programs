@@ -1,3 +1,4 @@
+#include <ctype.h>
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
@@ -16,7 +17,7 @@ int GetLongestWords(char s[MAX_STRING_LEN], char o[MAX_OUT_LENGTH][MAX_WORD_LENG
     char temp[MAX_WORD_LENGTH];
 
     for (i = 0; i<strlen(s); i++){
-        if (s[i] != ' ' && s[i] != '\0'){
+        if (s[i] != ' ' && s[i] != '\0' && isalpha(s[i])){
             wlen ++;
             continue;
         } 
