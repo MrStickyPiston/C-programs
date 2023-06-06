@@ -7,12 +7,16 @@
 #include "modules/SameDistanceChecker.c"
 #include "modules/BracketsCloser.c"
 #include "modules/StartsWith.c"
+#include "modules/LongestWords.c"
+
+#define MAX_STRING_LEN 1024
 
 int main(){
     int program;
     
     printf("Enter a program: ");
     scanf("%d", &program);
+    fflush(stdin);
 
     if (program == 1){
         int n;
@@ -98,6 +102,26 @@ int main(){
             printf("'%s', ", o[i]);
         }   
         printf("\b\b]\n");
+
+    } else if (program == 7){
+        char o[10][32], s[MAX_STRING_LEN];
+        int i, indexc;
+
+        printf("Enter the string: ");
+        scanf("%[^\n]s", s);
+
+        printf("The longest words are: ");
+
+        indexc = GetLongestWords(s, o);
+
+        for (i=0; i<indexc; i++){
+            printf("%s", o[i]);
+
+            if (indexc - i != 1){
+                printf(", ");
+            }
+        }
+
     }
     return 0;
 }
