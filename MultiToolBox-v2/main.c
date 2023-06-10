@@ -8,6 +8,8 @@
 #include "modules/BracketsCloser.c"
 #include "modules/StartsWith.c"
 #include "modules/LongestWords.c"
+#include "modules/MultiplyInt.c"
+#include "modules/GradeConverter.c"
 
 #define MAX_STRING_LEN 1024
 
@@ -122,6 +124,22 @@ int main(){
             }
         }
 
+    } else if (program == 8){
+        int n;
+
+        printf("Enter a number: ");
+        scanf("%d", &n);
+
+        printf("The product of the odd digits in %d is %d.\n", n, MultiplyInt(n));
+    } else if (program == 9){
+        char o[3];
+        double n;
+
+        printf("Enter a number: ");
+        scanf("%lf", &n);
+
+        GradeConverter(n, o);
+        printf("The letter grade is %s\n", o);
     }
     return 0;
 }
