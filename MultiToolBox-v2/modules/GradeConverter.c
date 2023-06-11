@@ -12,7 +12,6 @@ void GradeConverter(double n, char o[3]){
 
     for (i = 0; i < 8; i++){
         if (n >= gradesN[i]){
-            printf("%d, %f\n", i, n);
             strcpy(o, gradesC[i]);
             return;
         }

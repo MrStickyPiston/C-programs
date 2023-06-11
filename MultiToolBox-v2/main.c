@@ -16,11 +16,19 @@
 int main(){
     int program;
     
-    printf("Enter a program: ");
+    printf("[0] CriteriaChecker\n[1] CriteriaChecker_Find\n[2] NumberArray\n[3] SequenceChecker\n[4] SamdeDistanceChecker\n[5] BracketsCloser\n[6] StartsWithArray\n[7] LongestWords\n[8] MultiplyInt\n[9] GradeConverter\n\nEnter a program: ");
     scanf("%d", &program);
     fflush(stdin);
 
-    if (program == 1){
+    if (program == 0){
+        int n;
+
+        printf("Enter a number: ");
+        scanf("%d", &n);
+
+        printf("%d does meet the criteria: %d.\n", n, CriteriaChecker_check(n));
+
+    } else if (program == 1){
         int n;
 
         printf("Enter a number: ");
